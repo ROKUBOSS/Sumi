@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Collapsible Sections</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f4f4f9, #e0e0f5);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .collapsible {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .collapsible:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      transform: translateY(-3px);
+    }
+
+    .collapsible.active {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+
+    .collapsible i {
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible.active i {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      padding: 0 18px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content p, .content ol, .content ul {
+      margin: 15px 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+      color: #2575fc;
+      margin-top: 20px;
+    }
+
+    .content ol, .content ul {
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .collapsible {
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      .content {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button type="button" class="collapsible">
+      Top 10 Most Ordered Website Types in Bangladesh
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="content">
+      <ol>
+        <li>E-commerce Website</li>
+        <li>Educational Website</li>
+        <li>Corporate and Business Website</li>
+        <li>News Portal</li>
+        <li>Blog and Affiliate Marketing Sites</li>
+        <li>Freelancing and Job Portal</li>
+        <li>Healthcare Website</li>
+        <li>Real Estate Website</li>
+        <li>Online Services (Service Marketplace)</li>
+        <li>Entertainment and Streaming Sites</li>
+      </ol>
+      <h3>Our Ready Websites</h3>
+      <ol>
+        <li>E-commerce Website</li>
+        <li>Educational Website</li>
+        <li>Corporate and Business Website</li>
+        <li>Schedule Management</li>
+        <li>Beauty Parlour</li>
+        <li>Doctor</li>
+        <li>Exam System</li>
+        <li><i>POS (Point of Sale)</i></li>
+      </ol>
+    </div>
+
+    <button type="button" class="collapsible">
+      ওয়েবসাইট কেন প্রয়োজন?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="content">
+      <h1>ফেসবুক বুস্টিং বা প্রমোশনে রিচ বৃদ্ধি</h1>
+      <p>ওয়েবসাইটে ফেসবুক পিক্সেল ইন্টিগ্রেট করা যায়, যা ভিজিটরের ডাটা সংগ্রহ করে পুনরায় টার্গেটিং করার সুযোগ দেয়। ফলে বিজ্ঞাপনের রিচ এবং কনভার্সন বাড়ে।</p>
+      <h1>কাস্টমারের কাছে গ্রহণযোগ্যতা বৃদ্ধি</h1>
+      <p>একটি ওয়েবসাইট পেশাদারিত্ব ও বিশ্বাসযোগ্যতা বাড়ায়। গ্রাহকরা আপনার ব্যবসাকে আরো নির্ভরযোগ্য মনে করে।</p>
+      <h1>সুন্দর এবং অর্গানাইজড উপস্থাপন</h1>
+      <p>পণ্য, সেবা, এবং কন্টেন্ট সুন্দরভাবে ক্যাটাগরিভিত্তিক সাজানো যায়, যা গ্রাহকের জন্য সহজ এবং আকর্ষণীয় হয়।</p>
+      <h1>অর্ডার এবং অর্ডার প্রসেসিং সহজ</h1>
+      <p>ই-কমার্স ওয়েবসাইটের মাধ্যমে অর্ডার নেয়া এবং প্রসেস করা খুবই সহজ ও স্বয়ংক্রিয় করা যায়, যা ব্যবসায়ের কার্যক্ষমতা বাড়ায়।</p>
+      <h1>ব্র্যান্ড বিল্ডিং এবং মার্কেটিং</h1>
+      <p>SEO (Search Engine Optimization) এর মাধ্যমে গুগলে সার্চ রেজাল্টে ভালো অবস্থানে আসা যায়, যা ব্র্যান্ড ভ্যালু এবং পরিচিতি বাড়ায়।</p>
+      <h1>কাস্টমার সার্ভিস এবং সাপোর্ট</h1>
+      <p>FAQ সেকশন, লাইভ চ্যাট, এবং কনট্যাক্ট ফর্মের মাধ্যমে গ্রাহক সাপোর্ট খুব সহজে এবং দ্রুত প্রদান করা যায়।</p>
+      <h1>ডাটা এনালিটিক্স এবং ব্যবসার উন্নতি</h1>
+      <p>Google Analytics এবং অন্যান্য টুলস ব্যবহার করে ভিজিটরদের আচরণ, পছন্দ এবং চাহিদা বিশ্লেষণ করা যায়, যা মার্কেটিং স্ট্রাটেজি উন্নত করতে সাহায্য করে।</p>
+      <h1>ব্যবসার পরিধি বাড়ানো</h1>
+      <p>স্থানীয় সীমাবদ্ধতা কাটিয়ে গ্লোবাল মার্কেটে পণ্য বা সেবা সহজে পৌঁছানো যায়।</p>
+      <h5>সংক্ষেপে: <br>
+        একটি ওয়েবসাইট কেবল অনলাইনে উপস্থিতি নয়, বরং ব্যবসায়ের বিকাশের জন্য অপরিহার্য একটি প্ল্যাটফর্ম, যা মার্কেটিং, ব্র্যান্ডিং, কাস্টমার সার্ভিস, এবং বিক্রয় বাড়াতে গুরুত্বপূর্ণ ভূমিকা পালন করে।</h5>
+    </div>
+
+    <button type="button" class="collapsible">
+      ওয়েবসাইটের মাসিক এবং বার্ষিক খরচ
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="content">
+      <p>1. ডোমেইন:</p>
+      <p>বার্ষিক খরচ: ১৫ ডলার</p>
+      <p>মেয়াদ: কমপক্ষে ১ বছর এবং সর্বোচ্চ ১০ বছর পর্যন্ত রেজিস্ট্রেশন বা নবায়ন করা যায়।</p>
+      <p>2. হোস্টিং:</p>
+      <p>মাসিক খরচ: গড়ে ১০ ডলার</p>
+      <p>মেয়াদ: কমপক্ষে ১ মাস, তবে সর্বোচ্চ মেয়াদের কোনো নির্দিষ্ট সীমা নেই। দীর্ঘমেয়াদে প্রিপেইড করলে ডিসকাউন্ট পেতে পারেন।</p>
+      <p>3. Vimeo:</p>
+      <p>মাসিক খরচ: গড়ে ১০ ডলার</p>
+      <p>4. Service charge:</p>
+      <p>মাসিক খরচ: গড়ে 5-100 ডলার</p>
+    
+    </div>
+
+    <button type="button" class="collapsible">
+        ২০২৫ সালে এই ওয়েবসাইট প্রযুক্তিগুলি ব্যাপকভাবে ব্যবহার হচ্ছে এবং দ্রুত বিকশিত হচ্ছে:
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="content">
+        <ul>
+            <li>  MERN Stack (MongoDB, Express.js, React.js, Node.js) – <br> ফুল-স্ট্যাক জাভাস্ক্রিপ্ট সমাধান, যা দ্রুত এবং ডাইনামিক ওয়েব অ্যাপ্লিকেশন তৈরি করতে ব্যবহৃত হয়।</li>
+            <li>Python (Django, Flask) – <br> ওয়েব অ্যাপ্লিকেশন এবং API ডেভেলপমেন্টের জন্য জনপ্রিয়, বিশেষ করে দ্রুত প্রোটোটাইপ তৈরি এবং ডাটা সায়েন্স ইন্টিগ্রেশনের জন্য।</li>
+            <li> .NET (ASP.NET Core) – <br>মাইক্রোসফটের শক্তিশালী ফ্রেমওয়ার্ক, যা এন্টারপ্রাইজ-লেভেলের অ্যাপ্লিকেশন ডেভেলপমেন্ট এবং ক্লাউড ইন্টিগ্রেশনের জন্য ব্যবহৃত হয়।</li>
+            <li> PHP (Laravel) – <br>ব্যাকএন্ড ডেভেলপমেন্টের জন্য শক্তিশালী ফ্রেমওয়ার্ক, যা MVC আর্কিটেকচার, সিকিউরিটি, এবং দ্রুত ডেভেলপমেন্টের সুবিধা দেয়।</li>
+            <li> WordPress – <br>বিশ্বের সবচেয়ে জনপ্রিয় কন্টেন্ট ম্যানেজমেন্ট সিস্টেম (CMS), যা প্লাগইন এবং থিমের মাধ্যমে সহজেই কাস্টমাইজ করা যায়।
+            </li>
+        </ul>
+
+        <h1>বাংলাদেশে ই-কমার্স সাইট তৈরি করতে বিভিন্ন প্রযুক্তির জন্য গড় খরচ নিচে দেওয়া হলো:</h1>
+        <ul>
+            <li>WordPress (WooCommerce): ২০,০০০ - ৮০,০০০ টাকা</li>
+            <li>PHP (Laravel): ৬০,০০০ - ২,০০,০০০ টাকা</li>
+            <li>Python (Django/Flask): ১,০০,০০০ - ৩,০০,০০০ টাকা</li>
+            <li>MERN Stack (MongoDB, Express, React, Node.js): ১,৫০,০০০ - ৪,০০,০০০ টাকা</li>
+            <li>.NET (ASP.NET): ২,০০,০০০ - ৫,০০,০০০ টাকা</li>
+        </ul>
+        <h1>কিছু গুরুত্বপূর্ণ বিষয়::</h1>
+        <ul>
+            <li>WordPress তুলনামূলকভাবে সস্তা এবং দ্রুত ডেভেলপমেন্টের জন্য জনপ্রিয়।</li>
+            <li>Php (Laravel) কাস্টম ফিচার এবং উন্নত সিকিউরিটির জন্য বেশি ব্যবহৃত হয়।</li>
+            <li>MERN Stack সাধারণত বড় এবং জটিল সিস্টেমের জন্য ব্যবহৃত হয়, তাই খরচও বেশি।</li>
+            <li>.NET উন্নত সিকিউরিটি এবং স্কেলেবিলিটির জন্য .NET বেশ জনপ্রিয়।</li>
+            <li>Python সাধারণত উন্নত অ্যানালিটিক্স এবং মেশিন লার্নিং ইন্টিগ্রেশনের জন্য ব্যবহৃত হয়।</li>
+        </ul>
+        
+
+       
+        
+      
+       
+    </div>
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.style.padding = "0 18px";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.padding = "18px";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

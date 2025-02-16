@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stylish Collapsible Sections</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .collapsible {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .collapsible:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+  }
+
+  .collapsible.active {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+
+  .collapsible i {
+    transition: transform 0.3s ease;
+  }
+
+  .collapsible.active i {
+    transform: rotate(180deg);
+  }
+
+  .content {
+    padding: 0 18px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .content p {
+    margin: 15px 0;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .collapsible {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    .content {
+      padding: 0 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button type="button" class="collapsible">
+  LensCafe Studio
+  <i class="fas fa-chevron-down"></i>
+</button>
+<div class="content">
+  <a href="https://www.lenscafestudio.com/" target="_blank">LensCafe Studio</a> <br><br><br>
+  Email - admin@gmail.com  <br><br>
+  Password - 11223344 
+  
+  
+  
+</div>
+
+<button type="button" class="collapsible">
+    Schedule Management
+  <i class="fas fa-chevron-down"></i>
+</button>
+<div class="content">
+    <a href="https://schedule.alokshikha.com/" target="_blank"> Schedule Management</a> <br><br><br>
+    Email - admin@example.com  <br><br>
+    Password - 12345678
+</div>
+<button type="button" class="collapsible">
+    Alok Shikha
+  <i class="fas fa-chevron-down"></i>
+</button>
+<div class="content">
+    <a href="https://www.alokshikha.com/" target="_blank"> Alok Shikha</a> <br><br><br>
+    Email - admin@demo.com  <br><br>
+    Password - 12345678 
+</div>
+<button type="button" class="collapsible">
+    E-commerce
+  <i class="fas fa-chevron-down"></i>
+</button>
+<div class="content">
+    <a href="https://duis7.com/" target="_blank">  E-commerce</a> <br><br><br>
+    Email - admin@demo.com <br><br>
+    Password - admin 
+</div>
+<button type="button" class="collapsible">
+    Exam System
+  <i class="fas fa-chevron-down"></i>
+</button>
+<div class="content">
+    <a href="https://www.exam.alokshikha.com/" target="_blank"> Exam System</a> <br><br><br>
+    Email - ? <br><br>
+    Password - ?
+</div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.style.padding = "0 18px";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.padding = "18px";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

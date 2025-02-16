@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>SuMi</title>
+<link rel="shortcut icon" href="world.png" type="image/x-icon">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <div id="myLinks">
+    <a href="websites.html" target="_blank">Our WebSite</a>
+    <a href="websitesell.html" target="_blank">WebSite Knowledge</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div style="padding-left:16px">
+    <br><br>
+    <div class="quote">
+        "Success usually comes to those who are too busy to be looking for it."<br><br>– Henry David Thoreau
+    </div><br><br>
+    <div class="quote">
+        "Don’t be afraid to give up the good to go for the great." <br><br> – John D. Rockefeller
+    </div><br><br>
+    <div class="quote">
+        "Your time is limited, so don’t waste it living someone else’s life."<br><br> – Steve Jobs
+    </div><br><br>
+    <div class="quote">
+        "The way to get started is to quit talking and begin doing." <br><br>– Walt Disney
+    </div><br><br>
+    <div class="quote">
+        "The only limit to our realization of tomorrow will be our doubts of today."<br><br> – Franklin D. Roosevelt
+    </div>
+</div>
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
