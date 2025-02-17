@@ -237,5 +237,24 @@
       });
     }
   </script>
+
+  <!-- 😊😊😊 Right-Click 😊😊😊 -->
+
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
+  <!-- 😊😊😊 Keyboard-Shortcuts 😊😊😊 -->
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a' || e.key === 'f12')) {
+    e.preventDefault();
+  }
+});
+</script>
+
+
 </body>
 </html>
